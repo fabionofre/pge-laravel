@@ -14,7 +14,7 @@ class AlterUserTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->integer('tipo_user_id')->unsigned();
+            $table->integer('tipo_user_id')->unsigned()->default(1);
             $table->foreign('tipo_user_id')->references('id')->on('tipo_usuarios');
         });
     }
