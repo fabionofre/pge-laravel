@@ -14,5 +14,14 @@ class DatabaseSeeder extends Seeder
         DB::table('tipo_usuarios')->insert([
             'desc' => 'advogado'
         ]);
+        DB::table('especialidades')->insert([
+            'nome' => 'Criminal'
+        ]);
+        DB::table('especialidades')->insert([
+            'nome' => 'Cívil'
+        ]);
+        DB::table('especialidades')->insert([
+            'nome' => 'Família'
+        ]);
     }
 }

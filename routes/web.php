@@ -15,6 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Route::apiResources([
+    'advogado' => 'AdvogadoController',
+    'especialidade' => 'EspecialidadeController',
+    'advogado/especialidade' => 'AdvogadoEspecialidadeController'
+]);
 
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+
