@@ -7,7 +7,14 @@
 
 require('./bootstrap');
 
+
+import VueMaterial from 'vue-material'
+import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
+
+
 window.Vue = require('vue');
+Vue.use(VueMaterial);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -16,6 +23,7 @@ window.Vue = require('vue');
  */
 
 Vue.component('form-advogado', require('./cadastro/AdvogadoForm.vue')); 
+Vue.component('vue-nav', require('./menu/navbar.vue')); 
 
 const app = new Vue({
     el: '#app'
